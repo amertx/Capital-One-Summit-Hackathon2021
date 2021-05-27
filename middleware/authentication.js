@@ -81,6 +81,7 @@ export const loginWithEmail = (email, password) => {
         });
 };
 
+// probably should return something
 export const signOut = () => {
     firebase
         .auth()
@@ -94,6 +95,11 @@ export const signOut = () => {
 };
 
 // google oauth
+/*
+    google oauth in a popup tab
+    returns 202 and user tokens if valid
+    returns 401 if theres an error
+*/
 export const googleOAuth = () => {
     var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -125,6 +131,9 @@ export const googleOAuth = () => {
 };
 
 // get user
+/*
+    returns user info/schema
+*/
 export const getUser = () => {
     var user = firebase.auth().currentUser;
     var name, email, photoUrl, uid, emailVerified;
@@ -147,6 +156,7 @@ export const getUser = () => {
 };
 
 // get token
+// returns usertoken
 export const getToken = () => {
     var user = firebase.auth().currentUser;
 
