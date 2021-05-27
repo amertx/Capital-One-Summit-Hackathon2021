@@ -1,10 +1,10 @@
 ---
-title: 'Savings'
+title: 'Checkings'
 metaTitle: 'This is the title tag of this page'
 metaDescription: 'This is the meta description'
 ---
 
-This is your savings page. You can view savings information here.
+This is your checkings page. You can view checkings information here.
 
 Graph:
 
