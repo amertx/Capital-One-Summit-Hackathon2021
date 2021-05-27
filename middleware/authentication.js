@@ -88,6 +88,78 @@ const loginWithEmail = (email, password) => {
         });
 };
 
+const signOut = () => {
+    firebase
+        .auth()
+        .signOut()
+        .then(() => {
+            // signed out
+        })
+        .catch((error) => {
+            // throw error
+        });
+};
+
+// google oauth
+const googleOAuth = () => {
+    var provider = new firebase.auth.GoogleAuthProvider();
+
+    firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then((result) => {
+            /** @type {firebase.auth.OAuthCredential} */
+            var credential = result.credential;
+
+            // Google Access Token
+            var token = credential.accessToken;
+
+            var user = result.user;
+
+            return { status: 202, credentials: user };
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            var email = error.email;
+            var credential = error.credential;
+
+            return {
+                status: 401,
+                error: "Something went wrong. Try again later.",
+            };
+        });
+};
+
+// get user
+const getUser = () => {
+    var user = firebase.auth().currentUser;
+    var name, email, photoUrl, uid, emailVerified;
+
+    if (user != null) {
+        name = user.displayName;
+        email = user.email;
+        photoUrl = user.photoURL;
+        emailVerified = user.emailVerified;
+        uid = user.uid;
+    }
+
+    return {
+        name: name,
+        email: email,
+        photoUrl: photoUrl,
+        emailVerified: emailVerified,
+        uid: uid,
+    };
+};
+
+// get token
+const getToken = () => {
+    var user = firebase.auth().currentUser;
+
+    return user.getToken();
+};
+
 // node
 exports.initFirebase = initFirebase;
 exports.createWithEmail = createWithEmail;
