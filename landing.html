@@ -175,31 +175,31 @@
                     <tr>
                         <td>Savings Allocation %:</td>
                         <td>
-                            <input id="savings" name="savings" type="text" placeholder="" />
+                            <input id="savings_per" name="savings" type="text" placeholder="" />
                         </td>
                     </tr>
                     <tr>
                         <td>Checkings Allocation %:</td>
                         <td>
-                            <input id="checkings" name="checkings" type="text" placeholder="" />
+                            <input id="checkings_per" name="checkings" type="text" placeholder="" />
                         </td>
                     </tr>
                     <tr>
                         <td>Credit Lines Allocation %:</td>
                         <td>
-                            <input id="credit" name="credit" type="text" placeholder="" />
+                            <input id="credit_per" name="credit" type="text" placeholder="" />
                         </td>
                     </tr>
                     <tr>
                         <td>Investments Allocation %:</td>
                         <td>
-                            <input id="investments" name="investments" type="text" placeholder="" />
+                            <input id="investments_per" name="investments" type="text" placeholder="" />
                         </td>
                     </tr>
                     <tr>
                         <td>Donations Allocation %:</td>
                         <td>
-                            <input id="donations" name="donations" type="text" placeholder="" />
+                            <input id="donations_per" name="donations" type="text" placeholder="" />
                         </td>
                     </tr>
                 </table>
@@ -210,6 +210,11 @@
             </form>
         </div>
 
+        <div id="savingsDiv"></div>
+        <div id="checkingsDiv"></div>
+        <div id="creditDiv"></div>
+        <div id="investmentsDiv"></div>
+        <div id="donationsDiv"></div>
 
         <!-- Savings -->
         <div class="w3-container" id="savings" style="margin-top:75px">
@@ -224,19 +229,19 @@
                     <th>Balance</th>
                 </tr>
                 <tr>
-                    <td>5/24</td>
+                    <td>05/24</td>
                     <td>$231.00</td>
                 </tr>
                 <tr>
-                    <td>5/17</td>
+                    <td>05/17</td>
                     <td>$198.00</td>
                 </tr>
                 <tr>
-                    <td>5/10</td>
+                    <td>05/10</td>
                     <td>$132.00</td>
                 </tr>
                 <tr>
-                    <td>5/03</td>
+                    <td>05/03</td>
                     <td>$67.00</td>
                 </tr>
             </table>
@@ -255,19 +260,19 @@
                     <th>Balance</th>
                 </tr>
                 <tr>
-                    <td>5/24</td>
+                    <td>05/24</td>
                     <td>$203.00</td>
                 </tr>
                 <tr>
-                    <td>5/17</td>
+                    <td>05/17</td>
                     <td>$129.00</td>
                 </tr>
                 <tr>
-                    <td>5/10</td>
+                    <td>05/10</td>
                     <td>$53.00</td>
                 </tr>
                 <tr>
-                    <td>5/03</td>
+                    <td>05/03</td>
                     <td>$246.00</td>
                 </tr>
             </table>
@@ -286,19 +291,19 @@
                     <th>Balance</th>
                 </tr>
                 <tr>
-                    <td>5/24</td>
+                    <td>05/24</td>
                     <td>-$171.00</td>
                 </tr>
                 <tr>
-                    <td>5/17</td>
+                    <td>05/17</td>
                     <td>-$113.00</td>
                 </tr>
                 <tr>
-                    <td>5/10</td>
+                    <td>05/10</td>
                     <td>-$43.00</td>
                 </tr>
                 <tr>
-                    <td>5/03</td>
+                    <td>05/03</td>
                     <td>-$193.00</td>
                 </tr>
             </table>
@@ -312,32 +317,32 @@
                     <th>Amount</th>
                 </tr>
                 <tr>
-                    <td>5/27</td>
+                    <td>05/27</td>
                     <td>Spotify</td>
                     <td>-$5.99</td>
                 </tr>
                 <tr>
-                    <td>5/27</td>
+                    <td>05/27</td>
                     <td>Target</td>
                     <td>-$32.79</td>
                 </tr>
                 <tr>
-                    <td>5/23</td>
+                    <td>05/23</td>
                     <td>Sonic</td>
                     <td>-$5.74</td>
                 </tr>
                 <tr>
-                    <td>5/22</td>
+                    <td>05/22</td>
                     <td>Panera</td>
                     <td>-$12.54</td>
                 </tr>
                 <tr>
-                    <td>5/19</td>
+                    <td>05/19</td>
                     <td>Walmart</td>
                     <td>-$67.32</td>
                 </tr>
                 <tr>
-                    <td>5/19</td>
+                    <td>05/19</td>
                     <td>Starbucks</td>
                     <td>-$10.57</td>
                 </tr>
@@ -774,13 +779,62 @@
     <script>
         // Script to update outputs and update savings, checkings, and credit tables
         function calculate() {
+            // Obtain amounts for each specific category
             var amount = document.getElementById('amount').value;
-            var savings = document.getElementById('savings').value / 100 * amount;
-            var checkings = document.getElementById('checkings').value / 100 * amount;
-            var credit = document.getElementById('credit').value / 100 * amount;
-            var investments = document.getElementById('investments').value / 100 * amount;
-            var donations = document.getElementById('donations').value / 100 * amount;
-            console.log(investments);
+            var savings = Number(document.getElementById('savings_per').value / 100 * amount);
+            var checkings = Number(document.getElementById('checkings_per').value / 100 * amount);
+            var credit = Number(document.getElementById('credit_per').value / 100 * amount);
+            var investments = Number(document.getElementById('investments_per').value / 100 * amount);
+            var donations = Number(document.getElementById('donations_per').value / 100 * amount);
+
+            savings = savings.toFixed(2);
+            checkings = checkings.toFixed(2);
+            credit = credit.toFixed(2);
+            investments = investments.toFixed(2);
+            donations = donations.toFixed(2);
+
+            document.getElementById('savingsDiv').innerHTML = "Savings: $" + savings;
+            document.getElementById('checkingsDiv').innerHTML = "Checkings: $" + checkings;
+            document.getElementById('creditDiv').innerHTML = "Credit: $" + credit;
+            document.getElementById('investmentsDiv').innerHTML = "Investments: $" + investments;
+            document.getElementById('donationsDiv').innerHTML = "Donations: $" + donations;
+
+            //Obtain current date
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            today = mm + '/' + dd;
+
+
+            // Update savings table with new savings amount
+            var table = document.getElementById('savingsTable');
+            var row = table.insertRow(1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var balance = Number(savings) + 231;
+            balance = balance.toFixed(2);
+            cell1.innerHTML = today;
+            cell2.innerHTML = "$" + balance; //Hardcoded the number, oops
+
+            // Update checkings table with new checkings amount
+            var table = document.getElementById('checkingsTable');
+            var row = table.insertRow(1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var balance = Number(checkings) + 203;
+            balance = balance.toFixed(2);
+            cell1.innerHTML = today;
+            cell2.innerHTML = "$" + balance; //Hardcoded the number, oops
+
+            // Update checkings table with new checkings amount
+            var table = document.getElementById('creditTable');
+            var row = table.insertRow(1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var balance = Number(checkings) - 171;
+            balance = balance.toFixed(2);
+            cell1.innerHTML = today;
+            cell2.innerHTML = "$" + balance; //Hardcoded the number, oops
         }
     </script>
 
