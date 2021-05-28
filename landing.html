@@ -162,8 +162,8 @@
         <div class="w3-container" id="savings" style="margin-top:75px">
             <h1 class="w3-xxxlarge w3-text-navy"><b>Allocations.</b></h1>
             <hr style="width:50px;border:5px solid #004879" class="w3-round">
-            <p>With our allocation calculator, you can easily split your paycheck into different categories with our
-                pre-made percentages. If you want to change the allocation, you can change the numbers on the form.</p>
+            <p>With our allocation calculator, you can easily split your paycheck into different categories based on how
+                much percent you want to allocate to each category.</p>
             <form>
                 <table>
                     <tr>
@@ -215,24 +215,29 @@
         <div class="w3-container" id="savings" style="margin-top:75px">
             <h1 class="w3-xxxlarge w3-text-navy"><b>Savings.</b></h1>
             <hr style="width:50px;border:5px solid #004879" class="w3-round">
-            <p>Here at Capital One we care about you're saving. Here is a list of your past months savings:</p>
+            <p>Saving money is very important, espically for emergencies or retirement. Here is your savings balance
+                over time:</p>
             <br>
-            <table>
+            <table id="savingsTable">
                 <tr>
                     <th>Date</th>
-                    <th>Amount</th>
+                    <th>Balance</th>
                 </tr>
                 <tr>
-                    <td>5/1</td>
-                    <td>$100.00</td>
+                    <td>5/24</td>
+                    <td>$231.00</td>
                 </tr>
                 <tr>
-                    <td>5/16</td>
-                    <td>$30.00</td>
+                    <td>5/17</td>
+                    <td>$198.00</td>
                 </tr>
                 <tr>
-                    <td>5/27</td>
-                    <td>$15.00</td>
+                    <td>5/10</td>
+                    <td>$132.00</td>
+                </tr>
+                <tr>
+                    <td>5/03</td>
+                    <td>$67.00</td>
                 </tr>
             </table>
         </div>
@@ -241,43 +246,29 @@
         <div class="w3-container" id="checkings" style="margin-top:75px">
             <h1 class="w3-xxxlarge w3-text-navy"><b>Checkings.</b></h1>
             <hr style="width:50px;border:5px solid #004879" class="w3-round">
-            <p>We want you to know where all of your money is going. Here are some of your past months expenses:</p>
+            <p>Having enough spending money to enjoy life is equally as importnat. Here is your checkings balance over
+                time:</p>
             <br>
-            <table>
+            <table id="checkingsTable">
                 <tr>
                     <th>Date</th>
-                    <th>Name</th>
-                    <th>Amount</th>
+                    <th>Balance</th>
                 </tr>
                 <tr>
-                    <td>5/1</td>
-                    <td>Spotify</td>
-                    <td>-$5.99</td>
+                    <td>5/24</td>
+                    <td>$203.00</td>
                 </tr>
                 <tr>
-                    <td>5/4</td>
-                    <td>Target</td>
-                    <td>-$32.79</td>
+                    <td>5/17</td>
+                    <td>$129.00</td>
                 </tr>
                 <tr>
-                    <td>5/4</td>
-                    <td>Sonic</td>
-                    <td>-$5.74</td>
+                    <td>5/10</td>
+                    <td>$53.00</td>
                 </tr>
                 <tr>
-                    <td>5/5</td>
-                    <td>Panera</td>
-                    <td>-$12.54</td>
-                </tr>
-                <tr>
-                    <td>5/7</td>
-                    <td>Walmart</td>
-                    <td>-$67.32</td>
-                </tr>
-                <tr>
-                    <td>5/7</td>
-                    <td>Starbucks</td>
-                    <td>-$10.57</td>
+                    <td>5/03</td>
+                    <td>$246.00</td>
                 </tr>
             </table>
         </div>
@@ -286,41 +277,67 @@
         <div class="w3-container" id="credit" style="margin-top:75px">
             <h1 class="w3-xxxlarge w3-text-navy"><b>Credit Lines.</b></h1>
             <hr style="width:50px;border:5px solid #004879" class="w3-round">
-            <p>We want you to know where all of your credit is going. Here are some of your past months expenses:</p>
+            <p>Using a credit card wisely can offer large benefits. However, if you are careless, you could end up
+                paying a lot more in interest. Here is your total credit balance:</p>
             <br>
-            <table>
+            <table id="creditTable">
+                <tr>
+                    <th>Date</th>
+                    <th>Balance</th>
+                </tr>
+                <tr>
+                    <td>5/24</td>
+                    <td>-$171.00</td>
+                </tr>
+                <tr>
+                    <td>5/17</td>
+                    <td>-$113.00</td>
+                </tr>
+                <tr>
+                    <td>5/10</td>
+                    <td>-$43.00</td>
+                </tr>
+                <tr>
+                    <td>5/03</td>
+                    <td>-$193.00</td>
+                </tr>
+            </table>
+            <br>
+            <p>Here are your most recent expenses:</p>
+            <br>
+            <table id="expensesTable">
                 <tr>
                     <th>Date</th>
                     <th>Name</th>
                     <th>Amount</th>
                 </tr>
                 <tr>
-                    <td>5/1</td>
+                    <td>5/27</td>
                     <td>Spotify</td>
                     <td>-$5.99</td>
                 </tr>
                 <tr>
-                    <td>5/4</td>
+                    <td>5/27</td>
                     <td>Target</td>
                     <td>-$32.79</td>
                 </tr>
                 <tr>
-                    <td>5/4</td>
+                    <td>5/23</td>
                     <td>Sonic</td>
                     <td>-$5.74</td>
                 </tr>
                 <tr>
-                    <td>5/5</td>
+                    <td>5/22</td>
                     <td>Panera</td>
                     <td>-$12.54</td>
                 </tr>
                 <tr>
-                    <td>5/7</td>
+                    <td>5/19</td>
                     <td>Walmart</td>
                     <td>-$67.32</td>
                 </tr>
                 <tr>
-                    <td>5/7</td>
+                    <td>5/19</td>
                     <td>Starbucks</td>
                     <td>-$10.57</td>
                 </tr>
@@ -466,26 +483,23 @@
             <p>Here are some ways that you have done that:</p>
             <form action="https://www.paypal.com/fundraiser/charity/1365413" method="post">
 
-    <!-- Identify your business so that you can collect the payments. -->
-    <input type="hidden" name="business"
-        value="donations@kcparkfriends.org">
+                <!-- Identify your business so that you can collect the payments. -->
+                <input type="hidden" name="business" value="donations@kcparkfriends.org">
 
-    <!-- Specify a Donate button. -->
-    <input type="hidden" name="cmd" value="_donations">
+                <!-- Specify a Donate button. -->
+                <input type="hidden" name="cmd" value="_donations">
 
-    <!-- Specify details about the contribution -->
-    <input type="hidden" name="item_name" value="Friends of the Park">
-    <input type="hidden" name="item_number" value="Fall Cleanup Campaign">
-    <input type="hidden" name="currency_code" value="USD">
+                <!-- Specify details about the contribution -->
+                <input type="hidden" name="item_name" value="Friends of the Park">
+                <input type="hidden" name="item_number" value="Fall Cleanup Campaign">
+                <input type="hidden" name="currency_code" value="USD">
 
-    <!-- Display the payment button. -->
-    <input type="image" name="submit"
-    src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
-    alt="Donate">
-    <img alt="" width="1" height="1"
-    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+                <!-- Display the payment button. -->
+                <input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
+                    alt="Donate">
+                <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
 
-</form>
+            </form>
             <br>
             <table>
                 <tr>
