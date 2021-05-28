@@ -94,6 +94,30 @@
         tr:nth-child(even) {
             background-color: lightgrey;
         }
+
+        #buttons {
+            margin: auto;
+            text-align: center;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 80px;
+            background-color: #004879;
+            color: white;
+            padding: 12px;
+            margin: 4px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12pt;
+            text-align: center;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #ff0000;
+        }
     </style>
 </head>
 
@@ -138,7 +162,50 @@
         <div class="w3-container" id="savings" style="margin-top:75px">
             <h1 class="w3-xxxlarge w3-text-navy"><b>Allocations.</b></h1>
             <hr style="width:50px;border:5px solid #004879" class="w3-round">
-            <p>Here at Capital One we care about you're saving. Here is a list of your past months savings:</p>
+            <p>With our allocation calculator, you can easily split your paycheck into different categories with our
+                pre-made percentages. If you want to change the allocation, you can change the numbers on the form.</p>
+            <table>
+                <tr>
+                    <td>Income/Direct Deposit Amount:</td>
+                    <td>
+                        <input id="amount" name="amount" type="text" placeholder="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Savings Allocation %:</td>
+                    <td>
+                        <input id="savings" name="savings" type="password" placeholder="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Checkings Allocation %:</td>
+                    <td>
+                        <input id="checkings" name="checkings" type="password" placeholder="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Credit Lines Allocation %:</td>
+                    <td>
+                        <input id="credit" name="credit" type="password" placeholder="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Investments Allocation %:</td>
+                    <td>
+                        <input id="investments" name="investments" type="password" placeholder="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Donations Allocation %:</td>
+                    <td>
+                        <input id="donations" name="donations" type="password" placeholder="" />
+                    </td>
+                </tr>
+            </table>
+            <div id="buttons">
+                <input style="text-align:center" type="submit" value="Submit" />
+                <input style="text-align:center" type="reset" value="Reset" />
+            </div>
         </div>
 
 
