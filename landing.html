@@ -26,6 +26,8 @@
             firebase.auth().onAuthStatechanged(function(user) {
                 var displayName = user.displayName;
                 var email = user.email;
+
+                console.log(displayName);
                 
                 document.getElementById("username").textContext = displayName;
             })
