@@ -10,34 +10,34 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>g
 
     <script>
-    var firebaseConfig = {
-        apiKey: "AIzaSyBP-E4gj3NXjwaWxDMPgnu7XAljZp_AB4I",
-        authDomain: "capitaloneses-85392.firebaseapp.com",
-        projectId: "capitaloneses-85392",
-        storageBucket: "capitaloneses-85392.appspot.com",
-        messagingSenderId: "6491589459",
-        appId: "1:6491589459:web:1de3272c313e5e68aeefa6",
-        measurementId: "G-SBF0G38D3L"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
+        var firebaseConfig = {
+            apiKey: "AIzaSyBP-E4gj3NXjwaWxDMPgnu7XAljZp_AB4I",
+            authDomain: "capitaloneses-85392.firebaseapp.com",
+            projectId: "capitaloneses-85392",
+            storageBucket: "capitaloneses-85392.appspot.com",
+            messagingSenderId: "6491589459",
+            appId: "1:6491589459:web:1de3272c313e5e68aeefa6",
+            measurementId: "G-SBF0G38D3L"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
     </script>
     <script type="text/javascript">
-        initApp = function() {
-            firebase.auth().onAuthStateChanged(function(user) {
+        initApp = function () {
+            firebase.auth().onAuthStateChanged(function (user) {
                 var displayName = user.displayName;
                 var email = user.email;
 
                 console.log(displayName);
-                
-                document.getElementById("username").innerHTML = "Welcome" + displayName;
-            })
-        }    
 
-    window.addEventListener('load', function() {
-        initApp()
-    });
+                document.getElementById("username").innerHTML = "Welcome " + displayName;
+            })
+        }
+
+        window.addEventListener('load', function () {
+            initApp()
+        });
     </script>
     <link rel="icon" type="image/JPG" sizes="16x16" href="/images/CORA.JPG" />
     <meta charset="UTF-8">
@@ -133,6 +133,14 @@
                 your checkings and savings, but also your donations and investments. Wholistic banking is the future,
                 with C.O.R.A.</p>
         </div>
+
+        <!-- Allocations -->
+        <div class="w3-container" id="savings" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-navy"><b>Allocations.</b></h1>
+            <hr style="width:50px;border:5px solid #004879" class="w3-round">
+            <p>Here at Capital One we care about you're saving. Here is a list of your past months savings:</p>
+        </div>
+
 
         <!-- Savings -->
         <div class="w3-container" id="savings" style="margin-top:75px">
