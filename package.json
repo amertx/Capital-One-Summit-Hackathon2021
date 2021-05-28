@@ -1,1 +1,24 @@
-{}
+{
+  "name": "capital-one-summit-hackathon2021",
+  "version": "1.0.0",
+  "description": "Code base related to the development of Robo-Advisor + Virtual Assistant that allocates percentages of income into savings/checkings/investments and also option to allocate a percentage into donation/charitable organizations individually or as a group",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amertx/Capital-One-Summit-Hackathon2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amertx/Capital-One-Summit-Hackathon2021/issues"
+  },
+  "homepage": "https://github.com/amertx/Capital-One-Summit-Hackathon2021#readme",
+  "dependencies": {
+    "firebase": "^8.6.2",
+    "firebaseui": "^4.8.0"
+  }
+}
+
