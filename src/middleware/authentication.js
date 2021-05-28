@@ -1,22 +1,5 @@
-import firebase from "firebase/app";
-
-import "firebase/analytics";
-import "firebase/auth";
-import "firebase/firestore";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyBP-E4gj3NXjwaWxDMPgnu7XAljZp_AB4I",
-    authDomain: "capitaloneses-85392.firebaseapp.com",
-    projectId: "capitaloneses-85392",
-    storageBucket: "capitaloneses-85392.appspot.com",
-    messagingSenderId: "6491589459",
-    appId: "1:6491589459:web:1de3272c313e5e68aeefa6",
-    measurementId: "G-SBF0G38D3L",
-};
-
-export const initFirebase = () => {
-    firebase.initializeApp(firebaseConfig);
-};
+// don't think we need these anymore, firebaseUI takes care of a good amount of this
+// signOut, getUser, getToken are probably useful for the rest of the app
 
 /*
     Creates new user with provided email and password

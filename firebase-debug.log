@@ -1,0 +1,42 @@
+[debug] [2021-05-28T00:46:40.494Z] ----------------------------------------------------------------------
+[debug] [2021-05-28T00:46:40.497Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vishv\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions,hosting
+[debug] [2021-05-28T00:46:40.497Z] CLI Version:   9.12.0
+[debug] [2021-05-28T00:46:40.497Z] Platform:      win32
+[debug] [2021-05-28T00:46:40.497Z] Node Version:  v14.17.0
+[debug] [2021-05-28T00:46:40.498Z] Time:          Thu May 27 2021 19:46:40 GMT-0500 (Central Daylight Time)
+[debug] [2021-05-28T00:46:40.498Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-05-28T00:46:40.507Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-28T00:46:40.508Z] > authorizing via signed-in user (vishvakbandi@gmail.com)
+[debug] [2021-05-28T00:46:40.508Z] [iam] checking project capitaloneses-85392 for permissions ["firebase.projects.get"]
+[debug] [2021-05-28T00:46:40.510Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-05-28T00:46:40.511Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-28T00:46:40.666Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Fri, 28 May 2021 00:46:40 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-28T00:46:40.676Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/capitaloneses-85392:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-05-28T00:46:40.839Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 28 May 2021 00:46:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=79","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-28T00:46:40.841Z] > refreshing access token with scopes: []
+[debug] [2021-05-28T00:46:40.841Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-28T00:46:40.956Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Fri, 28 May 2021 00:46:41 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-28T00:46:40.965Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/capitaloneses-85392 [none]
+[debug] [2021-05-28T00:46:41.188Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/capitaloneses-85392 200
+[debug] [2021-05-28T00:46:41.188Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/capitaloneses-85392 {"projectId":"capitaloneses-85392","projectNumber":"6491589459","displayName":"CapitalOneSES","name":"projects/capitaloneses-85392","resources":{"hostingSite":"capitaloneses-85392"},"state":"ACTIVE"}
+[debug] [2021-05-28T00:46:41.191Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/capitaloneses-85392/sites 
+[debug] [2021-05-28T00:46:41.316Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at validateString (internal/validators.js:124:11)
+    at Object.join (path.js:402:7)
+    at FunctionsServer.start (C:\Users\vishv\AppData\Roaming\npm\node_modules\firebase-tools\lib\serve\functions.js:21:35)
+    at C:\Users\vishv\AppData\Roaming\npm\node_modules\firebase-tools\lib\serve\index.js:15:36
+    at arrayMap (C:\Users\vishv\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\lodash\lodash.js:653:23)
+    at Function.map (C:\Users\vishv\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\lodash\lodash.js:9622:14)
+    at serve (C:\Users\vishv\AppData\Roaming\npm\node_modules\firebase-tools\lib\serve\index.js:14:25)
+    at Command.actionFn (C:\Users\vishv\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\serve.js:47:16)
+    at C:\Users\vishv\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:171:25
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2021-05-28T00:46:41.523Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/capitaloneses-85392/sites 200
+[debug] [2021-05-28T00:46:41.523Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/capitaloneses-85392/sites {"sites":[{"name":"projects/6491589459/sites/capitaloneses-85392","defaultUrl":"https://capitaloneses-85392.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2021-05-28T00:46:41.524Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/capitaloneses-85392/webApps/-/config [none]

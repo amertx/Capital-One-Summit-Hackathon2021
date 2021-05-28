@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/amertx/Capital-One-Summit-Hackathon2021#readme",
   "dependencies": {
-    "firebase": "^8.6.2"
+    "firebase": "^8.6.2",
+    "firebaseui": "^4.8.0"
   }
 }
